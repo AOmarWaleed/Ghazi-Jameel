@@ -1,0 +1,73 @@
+/* HEADER */
+header {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+video {
+  z-index: -1;
+  min-height: 100%;
+  min-width: 100%;
+
+  /* CENTER THE VIEW */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading-place-holder {
+  z-index: -1;
+}
+
+/*  */
+
+/* FIND A CAR */
+#findCar .cards > div {
+  transition: 0.3s all;
+  border-bottom: 8px solid transparent;
+}
+#findCar .cards > div:focus,
+#findCar .cards > div:hover {
+  border-color: rgba(var(--clr-blue));
+  background-color: rgba(var(--clr-blue), 0.4);
+}
+
+.multible-columns {
+  column-count: 3;
+  column-rule: 1px solid;
+  gap: 7rem;
+}
+
+@media screen and (max-width: 992px) {
+  .multible-columns {
+    column-count: 1;
+  }
+}
+/* mini card */
+.mini-cards .item p:nth-of-type(1) {
+  font-size: 18px;
+}
+.mini-cards .item p:nth-of-type(2) {
+  font-size: 13px;
+}
+
+.containerType {
+  container-type: inline-size;
+}
+
+@container (max-width: 755px) {
+  .mini-cards .containerType .row > div {
+    width: 33.333%;
+  }
+}
+@container (max-width: 600px) {
+  .mini-cards .containerType .row > div {
+    width: 50%;
+  }
+}
+
+/* Blog */
+#blog .img {
+  flex: 1 1 120px;
+}
+#blog .text {
+  flex: 1 1 300px;
+}

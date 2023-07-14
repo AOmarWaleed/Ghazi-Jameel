@@ -1,1 +1,126 @@
-/* You can add global styles to this file, and also import other style files */
+/* Custom Properties */
+:root {
+  /* COLORS */
+  --clr-blue: 38, 103, 177;
+
+  /* FONT FAMEILY */
+  /* --ff-primary: ;
+    --ff-secondery: ; */
+
+  /* line-height */
+  --main-line-height: 1.5;
+
+  /* LETTERS SPACING */
+  --letter-spacing-100: 1.15px;
+  --letter-spacing-200: 2.16px;
+}
+
+/* ************************ */
+/* RESET */
+/* ************************ */
+
+body {
+  overflow-x: hidden;
+}
+
+input {
+  --max-width: 100%;
+  --color: #fff;
+  --bg-clr: transparent;
+  --brdr-clr: transparent;
+  --focus-brdr-clr: rgba(var(--clr-blue));
+  --placeholder-clr: #fff;
+
+  width: 100%;
+  max-width: var(--max-width);
+  color: var(--color);
+  background-color: var(--bg-clr);
+  border: 2px solid var(--brdr-clr);
+  outline: none;
+  transition: 0.3s all;
+  padding: 5px;
+}
+input:focus,
+input:hover {
+  outline: none;
+  border-color: var(--focus-brdr-clr);
+}
+
+input::placeholder {
+  color: var(--placeholder-clr);
+}
+
+/* ****************** */
+/* Utilites */
+/* ****************** */
+.bg-blue {
+  --opacity: 1;
+  background-color: rgba(var(--clr-blue), var(--opacity));
+}
+
+.text-blue {
+  --opacity: 1;
+  color: rgba(var(--clr-blue), var(--opacity));
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.center-child {
+  place-items: center;
+}
+
+.btn-blue {
+  --bg-clr: rgba(38, 103, 177);
+  --clr: #fff;
+  --pd: 15px 47px;
+  --f-size: 1rem;
+  --border: none;
+  /* --sm: 4px 18px 3px 10px; */
+  background-color: var(--bg-clr);
+  color: var(--clr) !important;
+  border: var(--border);
+  font-size: var(--f-size);
+  padding: var(--pd);
+}
+
+.inset-0 {
+  inset: 0;
+}
+
+.letter-spacing-1 {
+  letter-spacing: var(--letter-spacing-100);
+}
+
+.letter-spacing-2 {
+  letter-spacing: var(--letter-spacing-200);
+}
+
+.responsive-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.main-line-height {
+  line-height: var(--main-line-height);
+}
+
+.hide {
+  transform: scale(0);
+}
+
+/* ******* */
+:not(body) #rootReactVNB {
+  position: absolute !important;
+}
+
+.mix-blend-mode-multiply {
+  mix-blend-mode: multiply;
+}
+
+.pointer-event-none {
+  pointer-events: none;
+}

@@ -1,0 +1,79 @@
+nav {
+  z-index: 9999;
+  /* 
+    ()===>>remove later
+    */
+  background-image: linear-gradient(rgb(0, 0, 0), transparent);
+}
+
+nav ul li {
+  min-width: fit-content;
+}
+
+nav .icons input {
+  top: 100%;
+  left: -200px;
+}
+
+/* TO HANDLE EL HOME LINK AND ICONS */
+@media screen and (max-width: 1050px) and (min-width: 992px) {
+  nav ul {
+    gap: 1rem !important;
+  }
+  nav .icons {
+    gap: 1rem !important;
+  }
+}
+/*  */
+/* TO HANDLE EL SEARCH INPUT IN SMALL VIEW */
+@media screen and (max-width: 992px) {
+  nav .icons input {
+    left: 0;
+    top: calc(100% + 10px);
+  }
+}
+
+/* ************************ */
+/* ************************ */
+/* ************************ */
+.logo-bg {
+  overflow: hidden;
+  width: calc(100% + 100px);
+
+  top: -383px;
+  left: -38px;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+  box-shadow: none;
+  border: none;
+}
+
+/* .brand::after {
+      content: '';
+      width: 200px;
+      height: 80px;
+      background-color: #fff;
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      z-index: -1;
+      transform: translateX(-50%) skew(-20deg);
+  }
+  .brand::before {
+      content: '';
+      width: 70px;
+      height: 80px;
+      background-color: #fff;
+      position: absolute;
+      top: 100%;
+      left: calc(100% + 40px);
+      z-index: -1;
+      transform:  skew(-20deg);
+  } */
+
+input[name="search"] {
+  max-width: 200px;
+  width: 200px;
+}

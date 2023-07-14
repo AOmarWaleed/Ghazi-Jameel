@@ -1,0 +1,232 @@
+<!-- HERO SECTION -->
+<header
+  class="min-vh-100 position-relative text-white d-flex align-items-center align-items-center overflow-hidden"
+>
+  <!-- loop autoplay muted -->
+  <video loop muted #video class="position-absolute">
+    <source src="assets/v.mp4" type="video/mp4" />
+  </video>
+  <img
+    src="assets/placeholder.PNG"
+    class="w-100 loading-place-holder position-absolute start-0 top-0 h-100 object-fit-cover"
+    *ngIf="show"
+    alt=""
+  />
+
+  <!-- <video loop autoplay muted #video class="position-absolute">
+    <source src="assets/v.mp4" type="video/mp4" />
+  </video> -->
+
+  <!-- fas fa-play -->
+  <i
+    class="fas fs-3 position-absolute pointer"
+    [ngClass]="toggle ? 'fa-pause' : 'fa-play'"
+    style="bottom: 5%; right: 10%"
+    (click)="toggleFn(video)"
+  ></i>
+  <!-- TOdo===> -->
+  <!-- fas fa-volume-high
+    fas fa-volume-high
+  fas fa-volume-low -->
+  <!-- fas fa-volume-xmark -->
+  <i
+    class="fas fa-volume-off fs-3 position-absolute pointer"
+    [ngClass]="video.muted ? 'fa-volume-xmark' : 'fa-volume-high'"
+    style="bottom: 5%; right: calc(10% + 35px)"
+    (click)="muteVideo(video)"
+  ></i>
+
+  <div class="header-content container ps-0">
+    <p class="display-6">Timeless Inspiration</p>
+    <p class="text-uppercase display-3 mb-5">UNLOCK ANY ROAD</p>
+    <button class="btn-blue fs-5">EXPLORE</button>
+  </div>
+</header>
+<!-- ******************* -->
+<!-- ******************* -->
+
+<!-- FIND A CAR -->
+<section id="findCar">
+  <div class="bg-blue text-white py-4">
+    <div class="container multible-columns">
+      <div class="item">
+        <p class="mb-0"><span class="fs-2 me-4">99%</span> Interest rate</p>
+        <p>No down payment and admin fees</p>
+      </div>
+
+      <div class="item d-flex align-items-center">
+        <p class="me-4 text-center"><span class="fs-2">5</span><br />Years</p>
+        <p>
+          roadside assistance <br />
+          or 100.000km manufacturer warranty
+        </p>
+      </div>
+
+      <div class="item d-flex align-items-center">
+        <p class="me-4 text-center"><span class="fs-2">1</span><br />Years</p>
+        <p>
+          Or 100.000 km <br />
+          Free Maintenance <br />
+          For all Models of 2023!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ****************************** -->
+
+  <div class="container py-5">
+    <p class="text-uppercase mb-0 letter-spacing-1">find a car</p>
+    <p class="mb-5 text-uppercase fw-bolder fs-5">
+      OUR <span class="text-blue">CARS</span> LISTING
+    </p>
+
+    <div class="row cards">
+      <div
+        class="col-md-6 col-lg-4 col-xl-3 p-3"
+        *ngFor="let item of getArrForTest(8)"
+      >
+        <div class="item">
+          <img
+            src="assets/1.jpg"
+            class="w-100 mix-blend-mode-multiply"
+            alt=""
+          />
+          <p class="mb-1 fs-4">UNI-K</p>
+          <p style="font-size: 13px" class="text-muted">Starting From</p>
+          <button class="btn-blue" style="--pd: 4px 18px 3px 10px">
+            <!-- TODO;=> pipe -->
+            920,000 EGP
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT US  -->
+<section id="about">
+  <div class="container py-5">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <p class="letter-spacing-1">WE BRING YOU TO THE FUTURE</p>
+        <p class="text-blue fs-3 fw-semibold">ABOUT US</p>
+        <p>
+          At Ghazi Jameel, we're passionate about helping our customers find the
+          perfect car to fit their needs. With years of experience in the
+          industry, we have built a reputation for providing high-quality
+          vehicles at competitive prices.
+        </p>
+        <p class="mb-5">
+          Our team is dedicated to providing exceptional customer service. We
+          understand that buying a car can be a significant investment, and we
+          strive to make the process as easy and stress-free as possible. Our
+          knowledgeable sales staff will work with you to understand your unique
+          needs and preferences, and help you find a vehicle that fits your
+          budget and lifestyle. We offer a wide selection of new and used cars
+          from the world's leading brands, and we're confident that we have
+          something to suit every taste. Whether you're looking for a
+          family-friendly SUV, a sporty coupe, or a rugged pickup truck,
+        </p>
+        <button class="btn-blue fs-5">LEARN MORE</button>
+      </div>
+      <div class="col-lg-6 position-relative overflow-hidden">
+        <img
+          class="responsive-img mix-blend-mode-multiply"
+          src="assets/2.jpg"
+          alt=""
+        />
+        <img
+          src="assets/Flag shape element.svg"
+          width="200px"
+          class="position-absolute"
+          style="bottom: 0; left: 0"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--   -->
+<section class="mini-cards">
+  <div class="container py-5">
+    <div class="row g-4">
+      <div class="col-lg-8 containerType">
+        <div class="row">
+          <div class="col-md-3 p-3" *ngFor="let item of getArrForTest(8)">
+            <div class="item">
+              <img
+                src="assets/3.jpg"
+                width="100%"
+                class="w-100 mix-blend-mode-multiply"
+                alt=""
+              />
+              <p class="mb-1">Oil Filter</p>
+              <p class="text-muted">2022/FILTERS</p>
+              <button
+                class="btn-blue"
+                style="--pd: 4px 18px 3px 10px; --f-size: 0.75rem"
+              >
+                273 SAR
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <h2 class="h3 text-blue main-line-height">
+          Sh2ARE PARTS & <br />
+          ACCESSORIES
+        </h2>
+        <p class="mb-5">
+          Changan spare parts and accessories are essential components that help
+          maintain or improve the performance of Changan vehicles. Changan is a
+          Chinese car manufacturer that produces a range of vehicles, including
+          sedans, SUVs, and vans. Here are some examples of simple Changan spare
+          parts and accessories and their descriptions..
+        </p>
+        <button class="btn-blue fs-5">LEARN MORE</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="container py-5">
+    <div class="title text-center mb-5">
+      <p class="text-uppercase letter-spacing-1">our News</p>
+      <h2>LATEST <span class="text-blue">BLOGS</span> AND EVENTS</h2>
+    </div>
+    <div class="row mb-5 g-4">
+      <div class="col-md-6" *ngFor="let item of getArrForTest(4)">
+        <div class="item d-flex gap-3 shadow-sm flex-wrap">
+          <div class="img">
+            <img src="assets/4.jpg" class="responsive-img" alt="" />
+          </div>
+          <div class="text p-3">
+            <h4>Changan Rank in China and Globally</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore
+            </p>
+            <a href="" class="text-capitalize">view more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+    <button
+      class="btn-blue text-blue letter-spacing-1 fs-5"
+      style="
+        --bg-clr: transperant;
+        --clr: rgba(38, 103, 177);
+        --border: 2px solid rgba(38, 103, 177);
+      "
+    >
+      SEE MORE
+    </button>
+  </div>
+</section>
